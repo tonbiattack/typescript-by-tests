@@ -1,0 +1,28 @@
+{
+  "name": "typescript-by-tests",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "TypeScript と Node.js の落とし穴を実行可能なテストから学ぶ静的教材サイト",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0",
+    "clean": "rm -rf dist examples/dist",
+    "build:examples": "tsc -p examples/tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p examples/tsconfig.json --noEmit",
+    "test:examples": "npm run clean && npm run build:examples && node --test $(find examples/dist/test -name '*.test.js' -print | sort)",
+    "build": "astro check && astro build",
+    "verify:links": "node scripts/verify-pages-links.mjs",
+    "verify": "npm run typecheck && npm run test:examples && GITHUB_ACTIONS=true npm run build && npm run verify:links",
+    "preview": "astro preview --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.4",
+    "@types/node": "^22.20.1",
+    "astro": "5.16.11",
+    "shiki": "1.29.2",
+    "typescript": "5.6.3"
+  }
+}
