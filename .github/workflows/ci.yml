@@ -20,11 +20,5 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Type-check the site and examples
-        run: npm run typecheck
-      - name: Run executable TypeScript examples
-        run: npm run test:examples
-      - name: Build Astro site for GitHub Pages
-        run: GITHUB_ACTIONS=true npm run build
-      - name: Verify GitHub Pages links
-        run: npm run verify:links
+      - name: Run the full quality gate
+        run: npm run verify
