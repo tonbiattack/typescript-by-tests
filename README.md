@@ -23,16 +23,16 @@ TypeScript を書いた経験はあるものの、`===`、`readonly`、`undefine
 
 ## 学習マップ
 
-全 **44 テーマ**を 8 カテゴリに分けています。初めての場合は Language → Collections → Functional → Error Handling の順が読みやすい構成ですが、興味のある挙動から始められます。
+全 **50 テーマ**を 8 カテゴリに分けています。初めての場合は Language → Collections → Functional → Error Handling の順が読みやすい構成ですが、興味のある挙動から始められます。
 
 | カテゴリ | テーマ数 | まず読むテーマ | 身に付ける問い |
 |---|---:|---|---|
-| Language | 11 | [`string: ===`](https://tonbiattack.github.io/typescript-by-tests/typescript/string/strict-equality/) | プリミティブ、参照、型変換、実行時privateをどう区別するか。 |
-| Collections | 8 | [`Array: push`](https://tonbiattack.github.io/typescript-by-tests/typescript/array/push/) | 可変性、浅いコピー、`readonly`、Map key をどう扱うか。 |
+| Language | 14 | [`string: ===`](https://tonbiattack.github.io/typescript-by-tests/typescript/string/strict-equality/) | プリミティブ、参照、型変換、closure、実行時privateをどう区別するか。 |
+| Collections | 9 | [`Array: push`](https://tonbiattack.github.io/typescript-by-tests/typescript/array/push/) | 可変性、浅いコピー、`readonly`、SetとMap key をどう扱うか。 |
 | Numbers | 4 | [`number: 0.1 + 0.2`](https://tonbiattack.github.io/typescript-by-tests/typescript/numbers/decimal-precision/) | IEEE 754、`NaN`、丸めをどう検証するか。 |
 | Functional | 9 | [`undefined: ??`](https://tonbiattack.github.io/typescript-by-tests/typescript/nullable/default/) | 不在、既定値、eager/lazy評価、iterator状態をどう表すか。 |
 | Error Handling | 3 | [`Error: assert.throws`](https://tonbiattack.github.io/typescript-by-tests/typescript/exception/throws/) | throw、`Result<T>`、`try/finally` をどう使い分けるか。 |
-| Generics | 3 | [`readonly number[]`](https://tonbiattack.github.io/typescript-by-tests/typescript/generics/number-constraint/) | コンパイル時の型と実行時の値をどう分けるか。 |
+| Generics | 5 | [`readonly number[]`](https://tonbiattack.github.io/typescript-by-tests/typescript/generics/number-constraint/) | unknown、literal型、コンパイル時の型と実行時の値をどう分けるか。 |
 | Date / Time | 2 | [`Date: timezone`](https://tonbiattack.github.io/typescript-by-tests/typescript/datetime/time-zone-format/) | instant、表示上の日付、夏時間をどう分けるか。 |
 | Concurrency | 4 | [`Promise: rejection`](https://tonbiattack.github.io/typescript-by-tests/typescript/async/promise-rejection/) | rejection、`Promise.all`、`allSettled`、明示的コンテキストをどう設計するか。 |
 
