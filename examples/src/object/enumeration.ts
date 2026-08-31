@@ -1,0 +1,1 @@
+export const enumerableKeys = () => { const parent = { inherited: 1 }; const child = Object.create(parent) as { own: number }; child.own = 2; return { keys: Object.keys(child), iterated: (() => { const result: string[] = []; for (const key in child) result.push(key); return result; })() }; };
