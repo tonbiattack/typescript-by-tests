@@ -676,6 +676,15 @@ export const lessons: Lesson[] = [
     tags: ['pitfall', 'generics', 'runtime', 'type-erasure'],
     outcome: 'expected: strings.constructor === numbers.constructor → true\nactual:   true',
   },
+  {
+    slug: 'equality/loose-vs-strict', section: 'Language', title: '== と ===: 暗黙変換の有無が異なる', oneLine: '== は比較前に型変換を行い、=== は型と値の両方を比較します。', version: 'TypeScript 5+', testName: '== は比較前に空文字を数値へ変換するが、=== は型が異なればfalseになる', sourceFile: 'coerciveEquality.ts', testFile: 'coerciveEquality.test.ts', sourcePath: 'src/equality/coerciveEquality.ts', testPath: 'test/equality/coerciveEquality.test.ts', checks: ['0 == "" はtrueになる', '0 === "" はfalseになる'], note: '意図しない型変換を避けるため、通常は===を使います。', tags: ['pitfall', 'equality', 'coercion'], outcome: '0 == "" → true\n0 === "" → false',
+  },
+  {
+    slug: 'async/promise-all-settled', section: 'Concurrency', title: 'Promise.allSettled: 成功と失敗を両方観測する', oneLine: 'allSettledは一つが失敗しても全Promiseの結果を配列で返します。', version: 'ES2020+', testName: 'Promise.allSettled は成功と失敗を結果配列として両方返す', sourceFile: 'promiseAllSettled.ts', testFile: 'promiseAllSettled.test.ts', sourcePath: 'src/async/promiseAllSettled.ts', testPath: 'test/async/promiseAllSettled.test.ts', checks: ['成功はfulfilledとして残る', '失敗はrejectedとして残る'], note: '複数処理の完了結果をまとめて監査したい場合にallSettledを使います。', tags: ['behavior', 'async', 'promise'], outcome: 'fulfilled, rejected',
+  },
+  {
+    slug: 'language/private-vs-hash-private', section: 'Language', title: 'private と #private: 実行時の隠蔽範囲が異なる', oneLine: 'TypeScriptのprivateは型検査の制約で、#privateはJavaScript実行時にも外部アクセスを拒みます。', version: 'TypeScript 5+', testName: 'privateは実行時プロパティとして書き換えられるが、#privateは外部から作れない', sourceFile: 'privateFields.ts', testFile: 'privateFields.test.ts', sourcePath: 'src/language/privateFields.ts', testPath: 'test/language/privateFields.test.ts', checks: ['privateのプロパティは実行時に存在する', '#private構文は外部コードでSyntaxErrorになる'], note: '実行時のカプセル化が必要なら#privateを使い、privateだけに秘密性を期待しません。', tags: ['pitfall', 'language', 'private', 'runtime'], outcome: 'private count → writable\n#private access → SyntaxError',
+  },
 ];
 
 export const navigation = [...new Set(lessons.map((lesson) => lesson.section))].map((label) => ({
