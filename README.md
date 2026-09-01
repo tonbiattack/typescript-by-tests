@@ -14,6 +14,8 @@
 | [Live Demo](https://tonbiattack.github.io/typescript-by-tests/) | ブラウザで Source と Test を対比して読む。 |
 | [Java by Tests](https://github.com/tonbiattack/java-by-tests) | Java 21 / JUnit 5 による姉妹リポジトリ。 |
 | [Java Demo](https://tonbiattack.github.io/java-by-tests/) | Java版の実行可能な教材サイト。 |
+| [Python by Tests](https://github.com/tonbiattack/python-by-tests) | Python / pytest による姉妹リポジトリ。 |
+| [Python Demo](https://tonbiattack.github.io/python-by-tests/) | Python版の実行可能な教材サイト。 |
 | [学習順のガイド](./LEARNING_PATH.md) | 関心に応じた開始地点と、Red → Green → Refactor の進め方。 |
 | [言語間の対応表](./coverage-matrix.md) | Java版のテーマをTypeScript/Node.jsの概念へ置き換えた理由。 |
 
